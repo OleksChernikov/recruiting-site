@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Рекрутинг ГЦПОС</title>
+
+    <link rel="icon" type="image/png" href="./assets/image/gcpos-80x80.png" sizes="32x32">
+
+    <link rel="icon" type="image/png" href="./assets/image/gcpos-48x48.png" sizes="48x48">
+
+    <link rel="apple-touch-icon" href="/assets/image/gcpos-180x180.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+              <div class="logo__inside">
+                <img src="./assets/icon/gcpos-500x500.png" alt="Логотип Навчального центру ДПСУ" class="logo__icon">
+                <div class="logo__nest">
+                  <h1 class="logo__title">
+                    Рекрутинг 
+                  </h1>
+                  <span class="logo__main-title">
+                    Головний центр підготовки особового складу Державної прикордонної служби України імені генерал-майора Ігоря Момота
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navigation" id="navigation">
+                <a href="#vacancy">Вакансії</a>
+                <!-- <a href="#catalog">Каталог</a> -->
+                <a href="#contacts">Контакти</a>
+                <a href="#about">Про нас</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container hero__content">
+
+                <span class="hero__label">
+                  
+                </span>
+
+                <h1>
+                    Твій досвід потрібен там, де він має 
+                    <span>значення</span>
+                </h1>
+
+                <p>
+                    
+                </p>
+
+                <a href="#registration" class="button">
+                  Заповнити анкету
+                </a>
+
+            </div>
+        </section>
+
+        <!-- <section class="features section" id="vacancy">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>ПОСАДИ У ПІДРОЗДІЛАХ ТИЛОВОГО ЗАБЕЗПЕЧЕННЯ</span>
+                    <h2>Вакантні посади</h2>
+                </div>
+
+                <div class="features__grid">
+
+                    <article class="feature-card">
+                        <div class="feature-card__icon">01</div>
+                        <h3>Інформація</h3>
+                        <p>Зручний доступ до актуальних матеріалів.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-card__icon">02</div>
+                        <h3>Категорії</h3>
+                        <p>Структурований каталог інформації.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-card__icon">03</div>
+                        <h3>Підтримка</h3>
+                        <p>Довідкові матеріали та відповіді на питання.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section> -->
+
+        <!-- <section class="registaration" id="registaration">
+          <form class="registaration__form">
+            
+          </form>
+        </section> -->
+
+        <section class="features section" id="vacancy">
+          <div class="container">
+            <div class="section-heading">
+                <span>ПОСАДИ У ПІДРОЗДІЛАХ ТИЛОВОГО ЗАБЕЗПЕЧЕННЯ</span>
+            </div>
+
+            <div class="vacancy-grid">
+                <!-- Інструктор -->
+                <article class="job-card">
+                    <div class="job-card__image-wrap">
+                        <img src="./assets/image/instructor.jpg" alt="Інструктор" class="job-card__img">
+                    </div>
+                    <div class="job-card__body">
+                        <h3 class="job-card__title">Інструктор</h3>
+                        <p class="job-card__desc">Підготовка особового складу, проведення практичних занять та тренувань.</p>
+                        <button type="button" class="job-card__btn" onclick="selectPosition('instructor')">Подати заявку</button>
+                    </div>
+                </article>
+
+                <!-- Водій -->
+                <article class="job-card">
+                    <div class="job-card__image-wrap">
+                        <img src="./assets/image/driver.jpg" alt="Водій" class="job-card__img">
+                    </div>
+                    <div class="job-card__body">
+                        <h3 class="job-card__title">Водій</h3>
+                        <p class="job-card__desc">Керування та технічне обслуговування автотранспорту центру.</p>
+                        <button type="button" class="job-card__btn" onclick="selectPosition('driver')">Подати заявку</button>
+                    </div>
+                </article>
+
+                <!-- Фельдшер -->
+                <article class="job-card">
+                    <div class="job-card__image-wrap">
+                        <img src="./assets/image/medic.jpg" alt="Фельдшер" class="job-card__img">
+                    </div>
+                    <div class="job-card__body">
+                        <h3 class="job-card__title">Фельдшер</h3>
+                        <p class="job-card__desc">Надання медичної допомоги, медичний супровід особового складу.</p>
+                        <button type="button" class="job-card__btn" onclick="selectPosition('medic')">Подати заявку</button>
+                    </div>
+                </article>
+
+                <!-- Кухар -->
+                <article class="job-card">
+                    <div class="job-card__image-wrap">
+                        <img src="./assets/image/cook.png" alt="Кухар" class="job-card__img">
+                    </div>
+                    <div class="job-card__body">
+                        <h3 class="job-card__title">Кухар</h3>
+                        <p class="job-card__desc">Організація харчування та приготування страв.</p>
+                        <button type="button" class="job-card__btn" onclick="selectPosition('cook')">Подати заявку</button>
+                    </div>
+                </article>
+
+                <!-- Працівник заводу / технік -->
+                <article class="job-card">
+                    <div class="job-card__image-wrap">
+                        <img src="./assets/image/worker.png" alt="Працівник заводу" class="job-card__img">
+                    </div>
+                    <div class="job-card__body">
+                        <h3 class="job-card__title">Працівник заводу</h3>
+                        <p class="job-card__desc">Залежно від специфіки підприємства, працівники залучаються до виготовлення продукції.</p>
+                        <button type="button" class="job-card__btn" onclick="selectPosition('worker')">Подати заявку</button>
+                    </div>
+                </article>
+            </div>
+          </div>
+        </section>  
+
+        <!-- Секція форми подачі заявки -->
+        <section class="recruitment-section" id="registration">
+          <div class="form-container">
+            <div class="form-header">
+              <span class="section-tag">АНКЕТА КАНДИДАТА</span>
+              <p class="section-desc">Заповніть поля анкети.</p>
+            </div>
+
+            <form class="styled-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="45967cf5-4b26-48af-91d1-5e8a98d03651">
+              <div class="form-grid">
+                <!-- Прізвище -->
+                <div class="form-group">
+                  <label for="last-name">Прізвище</label>
+                  <input type="text" id="last-name" name="last_name" placeholder="Введіть ваше прізвище" required>
+                </div>
+
+                <!-- Ім'я -->
+                <div class="form-group">
+                  <label for="first-name">Ім'я</label>
+                  <input type="text" id="first-name" name="first_name" placeholder="Введіть ваше ім'я" required>
+                </div>
+
+                <!-- По батькові -->
+                <div class="form-group">
+                  <label for="middle-name">По батькові</label>
+                  <input type="text" id="middle-name" name="middle_name" placeholder="Введіть по батькові" required>
+                </div>
+
+                <!-- Дата народження -->
+                <div class="form-group">
+                    <label for="birth-date">Дата народження</label>
+                    <!-- Змінили date на text -->
+                    <input type="text" id="birth-date" name="birth_date" placeholder="Оберіть дату..." required>
+                </div>
+
+                <!-- ІПН -->
+                <div class="form-group">
+                  <label for="tax-id">ІПН (РНОКПП)</label>
+                  <input type="text" id="tax-id" name="tax_id" maxlength="10" placeholder="10 цифр" pattern="[0-9]{10}" required>
+                </div>
+
+                <!-- Посада на всю ширину -->
+                <div class="form-group full-width">
+                  <label for="position">Посада, на яку претендуєте</label>
+                  <select id="position" name="position" required>
+                    <option value="" disabled selected>Оберіть вакантну посаду...</option>
+                    <option value="instructor">Інструктор</option>
+                    <option value="driver">Водій</option>
+                    <option value="cook">Кухар</option>
+                    <option value="medic">Фельдшер</option>
+                    <option value="worker">Працівник заводу</option>
+                    <option value="other">Інша посада (за погодженням)</option>
+                  </select>
+                </div>
+
+                <!-- Телефон -->
+                <div class="form-group">
+                  <label for="phone">Контактний номер телефону</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+380 (__) ___-__-__" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email">Електронна адреса</label>
+                  <input type="email" id="email" name="email" placeholder="name@domain.com" required>
+                </div>
+              </div>
+
+              <!-- Згода з обробкою даних (обов'язково для держструктур) -->
+              <div class="form-consent">
+                <label class="checkbox-container">
+                  <input type="checkbox" required>
+                  <span>Даю згоду на обробку та використання моїх персональних даних відповідно до Закону України «Про захист персональних даних».</span>
+                </label>
+              </div>
+
+              <!-- Кнопка сабміту в єдиному стилі сайту -->
+              <div class="form-actions">
+                <button type="submit" class="submit-btn">Відправити анкету</button>
+              </div>
+            </form>
+
+            <div id="success-message" style="display: none; text-align: center; padding: 40px 20px;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px;">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <h3 style="margin-bottom: 10px; color: #333;">Анкету успішно відправлено!</h3>
+                <p style="color: #666;">Дякуємо за ваш час. Представник рекрутингового відділу зв'яжеться з вами найближчим часом.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>ПРО НАС</span>
+                </div>
+
+                <div class="about__block">
+                  <p class="about__paragraph">
+                    <strong>Головний центр підготовки особового складу Державної прикордонної 
+                    служби України імені генерал-майора Ігоря Момота</strong> <em>(в/ч 9930)</em> — державний 
+                    професійно-технічний навчальний заклад з підготовки молодшого персоналу 
+                    для органів охорони державного кордону. Навчальний центр має третій 
+                    атестаційний рівень. Підпорядкований Державній прикордонній службі України.
+                  </p> 
+                </div>
+
+                <div class="about__block">
+                  <p class="about__paragraph">
+                    <strong>Основне завдання центру</strong> — підготовка молодшого персоналу для органів 
+                    охорони державного кордону. Центр здійснює підготовку, перепідготовку 
+                    та підвищення професійної кваліфікації, пов'язану з впровадженням 
+                    новітніх технологій виробництва чи сфери послуг, з формуванням у 
+                    них необхідних економічних і організаційно-управлінських знань та 
+                    комп'ютерної грамотності. Навчальний центр здійснює перепідготовку та 
+                    підвищення професійної кваліфікації незайнятого населення.
+
+                    Термін підготовки молодшого персоналу — до 6 місяців.
+                    У Навчальному центрі одночасно може здійснюватися 
+                    підготовка <strong> до 1000 </strong> військовослужбовців за різними напрямками підготовки.
+                    <strong>За 25 років</strong> на базі Навчального центру підготовлено <strong>понад 90 тисяч</strong>  
+                    молодших спеціалістів для органів охорони кордону.
+                  </p> 
+                <div>
+                
+
+            </div>
+                    <!-- <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Пошук..."
+                    > -->
+
+                    <!-- <div class="filter-buttons" id="filterButtons">
+                        <button class="filter-btn active" data-category="all">
+                            Усі
+                        </button>
+
+                        <button class="filter-btn" data-category="info">
+                            Інформація
+                        </button>
+
+                        <button class="filter-btn" data-category="docs">
+                            Документи
+                        </button>
+
+                        <button class="filter-btn" data-category="help">
+                            Допомога
+                        </button>
+                    </div> -->
+
+                </div>
+
+                <div class="about__grid" id="catalogGrid">
+                </div>
+
+                <!-- <p class="empty-message" id="emptyMessage">
+                    Нічого не знайдено.
+                </p> -->
+            </div>
+        
+        </section>
+
+        <section class="contacts section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>Контакти відділу рекрутингу</span>
+                </div>
+                
+                    <div class="contacts-block">
+                        <!-- <h1 class="main-title">Контактні номера телефонів</h1> -->
+                        <div class="contact-phones">
+                            <a class="contact-item" href="tel:0472605009">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                                </svg>
+                                <p class="link">(0472) 60-50-09</p>
+                            </a>
+                            <a class="contact-item" href="tel:+380970067398">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                                </svg>
+                                <p class="link">(+380) 97-006-73-98</p>
+                            </a>
+                            
+                        </div>
+                        <div class="contact-sociL-media">
+                            <a class="contact-item" href="https://www.facebook.com/gcdpsu/?locale=uk_UA">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="size-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link preview-icon"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                                <p class="link">Facebook</p>
+                            </a>
+                        </div>
+                        <!-- <div class="contact-mail">
+                            <span></span>
+                            <a href="mailto:example@email.com">@gmail.com</a>
+                        </div> -->
+                    </div>
+
+                
+        </section>
+
+    </main>
+
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <p>© 2026, Головний центр підготовки особового складу Державної прикордонної служби України імені генерал-майора Ігоря Момота. Усі права захищено.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/uk.js"></script>
+    
+    <script src="./js/app.js"></script>
+
+</body>
+</html>
