@@ -537,9 +537,22 @@ select {
 
     .about__paragraph {
         font-size: 18px;
-        text-align: justify; /* Повертаємо вирівнювання по ширині */
+        text-align: justify;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+    .job-card {
+        height: 450px;
+    }
+
+    .job-card__img {
+        object-position: 50% 35%;
     }
 }
+
 
 /* DESKTOP (від 1024px) */
 @media (min-width: 1024px) {
@@ -626,4 +639,133 @@ input[type="date"] {
 /* Робимо поле світлішим, якщо дата ще не обрана (імітація placeholder) */
 input[type="date"]:invalid::-webkit-datetime-edit {
     color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+/* Базові стилі для секції */
+.academy-section {
+  padding: 60px 20px;
+  background-color: #ffffff; /* Контрастує з сірим фоном форми, якщо він є */
+}
+
+/* Перевикористай свій існуючий клас контейнера, якщо він є */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стиль маленького заголовка (як над картками) */
+.section-subtitle {
+  font-size: 13px;
+  color: #7a7a7a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.academy-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.academy-title {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.academy-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.academy-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.academy-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #7b9472; /* Оливковий колір твоєї кнопки на Hero екрані */
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.academy-benefits strong {
+  display: block;
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.academy-benefits span {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.academy-media {
+  width: 100%;
+}
+
+.academy-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px; /* Відповідає заокругленню твоїх карток вакансій */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Адаптація для планшетів та десктопів */
+@media (min-width: 992px) {
+  .academy-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .academy-info {
+    flex: 1;
+  }
+  
+  .academy-media {
+    flex: 1;
+    height: 500px; /* Фіксуємо висоту для красивого відображення поруч із текстом */
+  }
+}
+
+
+.academy-section {
+    background: var(--background);
 }
