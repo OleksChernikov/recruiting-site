@@ -761,11 +761,16 @@ input[type="date"]:invalid::-webkit-datetime-edit {
   
   .academy-media {
     flex: 1;
-    height: 500px; /* Фіксуємо висоту для красивого відображення поруч із текстом */
+    height: 450px; /* Фіксуємо висоту для красивого відображення поруч із текстом */
   }
 }
 
 
 .academy-section {
     background: var(--background);
+}
+
+.link-nadpsu {
+    color: var(--primary-btn);
+    text-decoration: underline;
 }
