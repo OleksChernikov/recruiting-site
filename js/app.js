@@ -231,47 +231,47 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // FILTER
 
-function filterItems() {
-    const filteredItems = catalogItems.filter(item => {
+// function filterItems() {
+//     const filteredItems = catalogItems.filter(item => {
 
-        const matchesCategory =
-            activeCategory === "all" ||
-            item.category === activeCategory;
+//         const matchesCategory =
+//             activeCategory === "all" ||
+//             item.category === activeCategory;
 
-        const matchesSearch =
-            item.title.toLowerCase().includes(searchQuery) ||
-            item.description.toLowerCase().includes(searchQuery);
+//         const matchesSearch =
+//             item.title.toLowerCase().includes(searchQuery) ||
+//             item.description.toLowerCase().includes(searchQuery);
 
-        return matchesCategory && matchesSearch;
-    });
+//         return matchesCategory && matchesSearch;
+//     });
 
-    renderCards(filteredItems);
-}
+//     renderCards(filteredItems);
+// }
 
 // SEARCH
 
-searchInput.addEventListener("input", (event) => {
-    searchQuery = event.target.value.trim().toLowerCase();
+// searchInput.addEventListener("input", (event) => {
+//     searchQuery = event.target.value.trim().toLowerCase();
 
-    filterItems();
-});
+//     filterItems();
+// });
 
 // CATEGORY FILTER
 
-filterButtons.addEventListener("click", (event) => {
-    const button = event.target.closest(".filter-btn");
+// filterButtons.addEventListener("click", (event) => {
+//     const button = event.target.closest(".filter-btn");
 
-    if (!button) return;
+//     if (!button) return;
 
-    document.querySelector(".filter-btn.active")
-        ?.classList.remove("active");
+//     document.querySelector(".filter-btn.active")
+//         ?.classList.remove("active");
 
-    button.classList.add("active");
+//     button.classList.add("active");
 
-    activeCategory = button.dataset.category;
+//     activeCategory = button.dataset.category;
 
-    filterItems();
-});
+//     filterItems();
+// });
 
 // INITIAL RENDER
 
