@@ -2,22 +2,47 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Рекрутинг ГЦПОС</title>
+    <title>Рекрутинг ГЦПОС | Робота з бронюванням Оршанець | Вакансії в тилу</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Актуальні посади та військова служба в тилу в Головному центрі підготовки особового складу (Оршанець, Черкаси, в/ч 9930). Офіційне працевлаштування з бронюванням.">
 
     <link rel="icon" type="image/png" href="./assets/image/gcpos-80x80.png" sizes="32x32">
 
     <link rel="icon" type="image/png" href="./assets/image/gcpos-48x48.png" sizes="48x48">
 
-    <link rel="apple-touch-icon" href="/assets/image/gcpos-180x180.png">
+    <link rel="apple-touch-icon" href="./assets/image/gcpos-180x180.png">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 
     <link rel="stylesheet" href="./css/style.css">
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org/",
+        "@type": "JobPosting",
+        "title": "Робота з бронюванням та військова служба в тилу — Оршанець (в/ч 9930)",
+        "description": "Набір на посади тилового забезпечення та службу з бронюванням у Головний центр підготовки особового складу ДПСУ імені генерал-майора Ігоря Момота (Оршанець, Черкаси). Відкриті вакансії: водій, кухар, фельдшер, інструктор, інспектор, працівник заводу.",
+        "datePosted": "2026-11-16",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+            "@type": "GovernmentOrganization",
+            "name": "Головний центр підготовки особового складу ДПСУ імені генерал-майора Ігоря Момота (в/ч 9930)"
+        },
+        "jobLocation": {
+            "@type": "Place",
+            "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Оршанець, Черкаси",
+            "addressRegion": "Черкаська область",
+            "addressCountry": "UA"
+            }
+        }
+        }
+    </script>
+</head>
 </head>
 <body>
 
@@ -27,9 +52,9 @@
               <div class="logo__inside">
                 <img src="./assets/icon/gcpos-500x500.png" alt="Логотип Навчального центру ДПСУ" class="logo__icon">
                 <div class="logo__nest">
-                  <h1 class="logo__title">
-                    Рекрутинг 
-                  </h1>
+                  <span class="logo__title">
+                    Рекрутинг
+                  </span>
                   <span class="logo__main-title">
                     Головний центр підготовки особового складу Державної прикордонної служби України імені генерал-майора Ігоря Момота
                   </span>
@@ -125,7 +150,7 @@
                 <!-- Інструктор -->
                 <article class="job-card">
                     <div class="job-card__image-wrap">
-                        <img src="./assets/image/instructor.webp" alt="Інструктор" class="job-card__img">
+                        <img src="./assets/image/instructor.webp" alt="Інструктор Головного центру підготовки особового складу, Оршанець" class="job-card__img">
                     </div>
                     <div class="job-card__body">
                         <h3 class="job-card__title">Інструктор</h3>
@@ -137,7 +162,7 @@
                 <!-- Водій -->
                 <article class="job-card">
                     <div class="job-card__image-wrap">
-                        <img src="./assets/image/driver.webp" alt="Водій" class="job-card__img">
+                        <img src="./assets/image/driver.webp" alt="Водій з бронюванням, робота в частині - Оршанець ДПСУ" class="job-card__img">
                     </div>
                     <div class="job-card__body">
                         <h3 class="job-card__title">Водій</h3>
@@ -149,7 +174,7 @@
                 <!-- Фельдшер -->
                 <article class="job-card">
                     <div class="job-card__image-wrap">
-                        <img src="./assets/image/medic.webp" alt="Фельдшер" class="job-card__img">
+                        <img src="./assets/image/medic.webp" alt="Фельдшер в тиловій частині - Оршанець ДПСУ" class="job-card__img">
                     </div>
                     <div class="job-card__body">
                         <h3 class="job-card__title">Фельдшер</h3>
@@ -161,7 +186,7 @@
                 <!-- Кухар -->
                 <article class="job-card">
                     <div class="job-card__image-wrap">
-                        <img src="./assets/image/cook.webp" alt="Кухар" class="job-card__img">
+                        <img src="./assets/image/cook.webp" alt="Кухар з бронюванням, Оршанець ДПСУ" class="job-card__img">
                     </div>
                     <div class="job-card__body">
                         <h3 class="job-card__title">Кухар</h3>
@@ -170,10 +195,21 @@
                     </div>
                 </article>
 
+                <article class="job-card">
+                    <div class="job-card__image-wrap">
+                        <img src="./assets/image/inspector.webp" alt="Інспектор з бронюванням, Оршанець ДПСУ" class="job-card__img">
+                    </div>
+                    <div class="job-card__body">
+                        <h3 class="job-card__title">Інспектор</h3>
+                        <p class="job-card__desc">Патрулювання ділянок, перевірка документів, охорона державного кордону.</p>
+                        <button type="button" class="job-card__btn" onclick="selectPosition('inspector')">Подати заявку</button>
+                    </div>
+                </article>
+
                 <!-- Працівник заводу / технік -->
                 <article class="job-card">
                     <div class="job-card__image-wrap">
-                        <img src="./assets/image/worker.webp" alt="Працівник заводу" class="job-card__img">
+                        <img src="./assets/image/worker.webp" alt="Працівник заводу з бронюванням - Оршанець ДПСУ, гідна заробітна плата" class="job-card__img">
                     </div>
                     <div class="job-card__body">
                         <h3 class="job-card__title">Працівник заводу</h3>
@@ -230,6 +266,7 @@
                     <option value="driver">Водій</option>
                     <option value="cook">Кухар</option>
                     <option value="medic">Фельдшер</option>
+                    <option value="inspector">Інспектор</option>
                     <option value="worker">Працівник заводу</option>
                     <option value="other">Інша посада (за погодженням)</option>
                   </select>
@@ -282,7 +319,7 @@
                 <div class="academy-info">
                     <h3 class="academy-title">Твоє майбутнє починається тут 👇</h3>
                     <p class="academy-description">
-                    Мрієш про професію, яка приностить задоволення та гідний дохід?
+                    Мрієш про професію, яка приносить задоволення та гідний дохід?
                     Наша академія - це місце де твої амбіції отримають міцний фундамент. <a class="link-nadpsu" href="https://nadpsu.edu.ua/">Обирай навчання в Національній академії Державної прикордонної служби України імені Богдана Хмельницького.</a>
                     </p>
                     
@@ -347,7 +384,7 @@
                     комп'ютерної грамотності. Навчальний центр здійснює перепідготовку та 
                     підвищення професійної кваліфікації незайнятого населення.
                   </p> 
-                <div>
+                </div>
                 
 
             </div>
@@ -387,7 +424,7 @@
         
         </section>
 
-        <section class="contacts section" id="about">
+        <section class="contacts section" id="contacts">
             <div class="container">
 
                 <div class="section-heading">
