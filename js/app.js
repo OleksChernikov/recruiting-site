@@ -74,50 +74,50 @@ document.querySelector('.styled-form').addEventListener('submit', function(e) {
 
 // DATA
 
-const catalogItems = [
-    {
-        id: 1,
-        title: "Загальна інформація",
-        description: "Основна довідкова інформація порталу.",
-        category: "info",
-        categoryName: "Інформація"
-    },
-    {
-        id: 2,
-        title: "Документація",
-        description: "Матеріали та інформаційні документи.",
-        category: "docs",
-        categoryName: "Документи"
-    },
-    {
-        id: 3,
-        title: "Часті запитання",
-        description: "Відповіді на поширені запитання.",
-        category: "help",
-        categoryName: "Допомога"
-    },
-    {
-        id: 4,
-        title: "Інструкції",
-        description: "Довідкові матеріали та інструкції.",
-        category: "docs",
-        categoryName: "Документи"
-    },
-    {
-        id: 5,
-        title: "Корисні матеріали",
-        description: "Додаткова інформація для відвідувачів.",
-        category: "info",
-        categoryName: "Інформація"
-    },
-    {
-        id: 6,
-        title: "Контакти підтримки",
-        description: "Інформація про доступні канали підтримки.",
-        category: "help",
-        categoryName: "Допомога"
-    }
-];
+// const catalogItems = [
+//     {
+//         id: 1,
+//         title: "Загальна інформація",
+//         description: "Основна довідкова інформація порталу.",
+//         category: "info",
+//         categoryName: "Інформація"
+//     },
+//     {
+//         id: 2,
+//         title: "Документація",
+//         description: "Матеріали та інформаційні документи.",
+//         category: "docs",
+//         categoryName: "Документи"
+//     },
+//     {
+//         id: 3,
+//         title: "Часті запитання",
+//         description: "Відповіді на поширені запитання.",
+//         category: "help",
+//         categoryName: "Допомога"
+//     },
+//     {
+//         id: 4,
+//         title: "Інструкції",
+//         description: "Довідкові матеріали та інструкції.",
+//         category: "docs",
+//         categoryName: "Документи"
+//     },
+//     {
+//         id: 5,
+//         title: "Корисні матеріали",
+//         description: "Додаткова інформація для відвідувачів.",
+//         category: "info",
+//         categoryName: "Інформація"
+//     },
+//     {
+//         id: 6,
+//         title: "Контакти підтримки",
+//         description: "Інформація про доступні канали підтримки.",
+//         category: "help",
+//         categoryName: "Допомога"
+//     }
+// ];
 
 let activeCategory = "all";
 let searchQuery = "";
@@ -149,7 +149,11 @@ function renderCards(items) {
         </article>
     `).join("");
 
-    emptyMessage.style.display = items.length ? "none" : "block";
+    if (emptyMessage) {
+      emptyMessage.style.display = filtered.length === 0 ? 'block' : 'none';
+    }
+
+    // emptyMessage.style.display = items.length ? "none" : "block";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -305,4 +309,4 @@ function selectPosition(jobValue) {
 // Знаходимо поле з датою
 
 
-renderCards(catalogItems);
+// renderCards(catalogItems);
